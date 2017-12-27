@@ -32,7 +32,8 @@ export class ProductComponent {
     ];
 
     showhide() {
-        console.log("clicked");
-        this.img=true;
+        console.log(this.img);
+        this.img=!this.img;
+        console.log(this.img);
     }
 }
