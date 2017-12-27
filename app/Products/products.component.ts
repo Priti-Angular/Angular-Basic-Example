@@ -15,7 +15,10 @@ export class ProductComponent {
     _listFilter:string;
 
 
-    constructor(private _ProductService:ProductService){}
+    constructor(private _ProductService:ProductService){
+        this.filteredProduct=this.products;
+        //this.listFilter='cart';
+    }
     products: IProduct[]=this._ProductService.getProducts();
 
     showhide() {
