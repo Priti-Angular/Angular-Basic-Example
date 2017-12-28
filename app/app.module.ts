@@ -5,10 +5,11 @@ import{AppComponent} from "./app.component";
 import{ProductComponent} from "../app/Products/products.component";
 import {ProductService} from "../app/Products/product.service";
 import { HttpClientModule} from '@angular/common/http';
+import { StarComponent} from '../app/feature/star.component';
 
 @NgModule ({
     imports :[BrowserModule, FormsModule,HttpClientModule],
-    declarations :[AppComponent,ProductComponent],
+    declarations :[AppComponent,ProductComponent,StarComponent],
     bootstrap:[AppComponent],
     providers:[ProductService],
 
