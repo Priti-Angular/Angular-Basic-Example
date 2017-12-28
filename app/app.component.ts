@@ -5,7 +5,11 @@ import { Component } from "@angular/core";
     template:`
         <div><h2>Hello World!</h2>
         <h2> {{name}}</h2>
-        <product-app></product-app>
+        <ul class="nav navbar-nav">
+        <li> <a [routerLink]="['/dashboard']">Dashboard</a></li>
+            <li> <a [routerLink]="['/products']">Product-list</a></li>
+        </ul>
+        <router-outlet></router-outlet>
         </div>
     `
 })
