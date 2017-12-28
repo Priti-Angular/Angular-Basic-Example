@@ -19,7 +19,7 @@ export class ProductComponent {
         this.filteredProduct=this.products;
         //this.listFilter='cart';
     }
-    products: IProduct[]=this._ProductService.getProducts();
+    products:IProduct[];
 
     showhide() {
         console.log(this.img);
@@ -43,4 +43,10 @@ performFilter(filterBy: string): IProduct[] {
           product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
           
 }	
+
+ngOnInit(): void {
+    this._ProductService.getProducts()
+    .subscribe(products => this.products= products,
+    error => this.errorMessage= <any>error);
+    }
 }
